@@ -18,7 +18,7 @@ paths:
         - Office
       summary: Get items in the office supplies catalog
       description: Uses the catalogProgram CICS COMMAREA z/OS asset
-      operationId: itemsGet
+      operationId: itemsbGet
       parameters:
         - $ref: '#/components/parameters/startItemID'
       responses:
@@ -40,7 +40,7 @@ paths:
         - Office
       summary: Get an item from the office supplies catalog
       description: Uses the catalogProgram CICS COMMAREA z/OS asset
-      operationId: itemsIdGet
+      operationId: itemsbIdGet
       parameters:
         - $ref: '#/components/parameters/id'
       responses:
@@ -78,7 +78,7 @@ paths:
         - Office
       summary: Place an order for an item
       description: Uses the catalogProgram CICS COMMAREA z/OS asset
-      operationId: ordersPost
+      operationId: ordersbPost
       parameters:
         - $ref: '#/components/parameters/itemNumber'
         - $ref: '#/components/parameters/quantity'
