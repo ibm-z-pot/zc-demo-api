@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: CatalogManagerApi
+  title: OfficeCatalogApi
   description: Manage an office supplies catalog through an API for CICS.
   version: '1.1'
   license:
@@ -8,6 +8,8 @@ info:
     url: https://opensource.org/licenses/Apache-2.0
 servers:
 - url: /
+x-ibm-zcon-roles-allowed:
+- Manager
 security:
   - BasicAuth: []
   - BearerAuth: []
@@ -19,6 +21,9 @@ paths:
       summary: Get items in the office supplies catalog
       description: Uses the catalogProgram CICS COMMAREA z/OS asset
       operationId: itemsGet
+      x-ibm-zcon-roles-allowed:
+      - Manager
+      - Staff
       parameters:
         - $ref: '#/components/parameters/startItemID'
       responses:
@@ -41,6 +46,9 @@ paths:
       summary: Get an item from the office supplies catalog
       description: Uses the catalogProgram CICS COMMAREA z/OS asset
       operationId: itemsIdGet
+      x-ibm-zcon-roles-allowed:
+      - Manager
+      - Staff
       parameters:
         - $ref: '#/components/parameters/id'
       responses:
@@ -79,6 +87,8 @@ paths:
       summary: Place an order for an item
       description: Uses the catalogProgram CICS COMMAREA z/OS asset
       operationId: ordersPost
+      x-ibm-zcon-roles-allowed:
+      - Manager
       parameters:
         - $ref: '#/components/parameters/itemNumber'
         - $ref: '#/components/parameters/quantity'
