@@ -8,8 +8,6 @@ info:
     url: https://opensource.org/licenses/Apache-2.0
 servers:
 - url: /
-x-ibm-zcon-roles-allowed:
-- Manager
 security:
   - BasicAuth: []
   - BearerAuth: []
@@ -22,8 +20,7 @@ paths:
       description: Uses the catalogProgram CICS COMMAREA z/OS asset
       operationId: itemsGet
       x-ibm-zcon-roles-allowed:
-      - Manager
-      - Staff
+      - Sales
       parameters:
         - $ref: '#/components/parameters/startItemID'
       responses:
@@ -47,8 +44,7 @@ paths:
       description: Uses the catalogProgram CICS COMMAREA z/OS asset
       operationId: itemsIdGet
       x-ibm-zcon-roles-allowed:
-      - Manager
-      - Staff
+      - Sales
       parameters:
         - $ref: '#/components/parameters/id'
       responses:
@@ -88,7 +84,7 @@ paths:
       description: Uses the catalogProgram CICS COMMAREA z/OS asset
       operationId: ordersPost
       x-ibm-zcon-roles-allowed:
-      - Manager
+      - Procurement
       parameters:
         - $ref: '#/components/parameters/itemNumber'
         - $ref: '#/components/parameters/quantity'
