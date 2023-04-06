@@ -21,6 +21,7 @@ paths:
       operationId: itemsGet
       x-ibm-zcon-roles-allowed:
       - Sales
+      - Manager
       parameters:
         - $ref: '#/components/parameters/startItemID'
       responses:
@@ -45,6 +46,7 @@ paths:
       operationId: itemsIdGet
       x-ibm-zcon-roles-allowed:
       - Sales
+      - Manager
       parameters:
         - $ref: '#/components/parameters/id'
       responses:
@@ -85,6 +87,7 @@ paths:
       operationId: ordersPost
       x-ibm-zcon-roles-allowed:
       - Procurement
+      - Manager
       parameters:
         - $ref: '#/components/parameters/itemNumber'
         - $ref: '#/components/parameters/quantity'
