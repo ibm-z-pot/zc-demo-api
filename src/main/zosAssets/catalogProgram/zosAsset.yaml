@@ -6,7 +6,7 @@ providerProperties:
   transidUsage: ""
   transid: ""
   language: "COBOL"
-  program: "CAT0XCMN"
+  program: "ICEAL00"
   bidiConfigRef: ""
   connectionRef: "cicsConn"
   ccsid: "37"
