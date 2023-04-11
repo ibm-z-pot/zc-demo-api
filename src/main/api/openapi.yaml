@@ -11,6 +11,8 @@ servers:
 security:
   - BasicAuth: []
   - BearerAuth: []
+x-ibm-zcon-roles-allowed:
+- Manager
 paths:
   /items:
     get:
@@ -20,8 +22,7 @@ paths:
       description: Uses the catalogProgram CICS COMMAREA z/OS asset
       operationId: itemsGet
       x-ibm-zcon-roles-allowed:
-      - Sales
-      - Manager
+      - AllAuthenticated
       parameters:
         - $ref: '#/components/parameters/startItemID'
       responses:
