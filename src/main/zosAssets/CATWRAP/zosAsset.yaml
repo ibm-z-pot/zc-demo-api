@@ -1,0 +1,9 @@
+---
+version: 1.0
+type: "cicsChannel-1.0"
+description: ""
+providerProperties:
+  language: "COBOL"
+  program: "CATWRAP"
+  connectionRef: "cicsConn"
+  ccsid: "037"

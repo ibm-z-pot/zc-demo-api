@@ -1,0 +1,14 @@
+---
+mappings:
+- channel:
+    mappings:
+    - REQUEST:
+        mappings:
+        - CPYCON01:
+            mappings:
+            - C1-INQUIRE-SINGLE:
+                mappings:
+                - C1-ITEM-REF-REQ:
+                    expression: "$pathParameters.id"
+            - C1-REQUEST-ID:
+                template: "01INQS"

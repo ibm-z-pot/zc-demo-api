@@ -1,0 +1,307 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "type" : "object",
+  "properties" : {
+    "channel" : {
+      "type" : "object",
+      "properties" : {
+        "RESPONSE" : {
+          "type" : "object",
+          "properties" : {
+            "CPYCON02" : {
+              "type" : "object",
+              "properties" : {
+                "C2-RESPONSE-SPECIFIC" : {
+                  "maxLength" : 911,
+                  "type" : "string",
+                  "x-ibm-zcon-metadata" : {
+                    "type" : "03 C2-RESPONSE-SPECIFIC PIC X(911) USAGE DISPLAY.",
+                    "name" : "C2-RESPONSE-SPECIFIC"
+                  }
+                },
+                "C2-INQUIRE-REQUEST" : {
+                  "type" : "object",
+                  "properties" : {
+                    "C2-LIST-START-REF" : {
+                      "minimum" : 0,
+                      "maximum" : 9999,
+                      "type" : "integer",
+                      "x-ibm-zcon-metadata" : {
+                        "type" : "05 C2-LIST-START-REF PIC 9(4) USAGE DISPLAY.",
+                        "name" : "C2-LIST-START-REF"
+                      }
+                    },
+                    "C2-LAST-ITEM-REF" : {
+                      "minimum" : 0,
+                      "maximum" : 9999,
+                      "type" : "integer",
+                      "x-ibm-zcon-metadata" : {
+                        "type" : "05 C2-LAST-ITEM-REF PIC 9(4) USAGE DISPLAY.",
+                        "name" : "C2-LAST-ITEM-REF"
+                      }
+                    },
+                    "C2-ITEM-COUNT" : {
+                      "minimum" : 0,
+                      "maximum" : 999,
+                      "type" : "integer",
+                      "x-ibm-zcon-metadata" : {
+                        "type" : "05 C2-ITEM-COUNT PIC 9(3) USAGE DISPLAY.",
+                        "name" : "C2-ITEM-COUNT"
+                      }
+                    },
+                    "C2-INQUIRY-RESPONSE-DATA" : {
+                      "maxLength" : 900,
+                      "type" : "string",
+                      "x-ibm-zcon-metadata" : {
+                        "type" : "05 C2-INQUIRY-RESPONSE-DATA PIC X(900) USAGE DISPLAY.",
+                        "name" : "C2-INQUIRY-RESPONSE-DATA"
+                      }
+                    },
+                    "C2-CAT-ITEM" : {
+                      "type" : "array",
+                      "maxItems" : 15,
+                      "minItems" : 15,
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "C2-ITEM-REF" : {
+                            "minimum" : 0,
+                            "maximum" : 9999,
+                            "type" : "integer",
+                            "x-ibm-zcon-metadata" : {
+                              "type" : "07 C2-ITEM-REF PIC 9(4) USAGE DISPLAY.",
+                              "name" : "C2-ITEM-REF"
+                            }
+                          },
+                          "C2-DESCRIPTION" : {
+                            "maxLength" : 40,
+                            "type" : "string",
+                            "x-ibm-zcon-metadata" : {
+                              "type" : "07 C2-DESCRIPTION PIC X(40) USAGE DISPLAY.",
+                              "name" : "C2-DESCRIPTION"
+                            }
+                          },
+                          "C2-DEPARTMENT" : {
+                            "minimum" : 0,
+                            "maximum" : 999,
+                            "type" : "integer",
+                            "x-ibm-zcon-metadata" : {
+                              "type" : "07 C2-DEPARTMENT PIC 9(3) USAGE DISPLAY.",
+                              "name" : "C2-DEPARTMENT"
+                            }
+                          },
+                          "C2-COST" : {
+                            "maxLength" : 6,
+                            "type" : "string",
+                            "x-ibm-zcon-metadata" : {
+                              "type" : "07 C2-COST PIC X(6) USAGE DISPLAY.",
+                              "name" : "C2-COST"
+                            }
+                          },
+                          "C2-IN-STOCK" : {
+                            "minimum" : 0,
+                            "maximum" : 9999,
+                            "type" : "integer",
+                            "x-ibm-zcon-metadata" : {
+                              "type" : "07 C2-IN-STOCK PIC 9(4) USAGE DISPLAY.",
+                              "name" : "C2-IN-STOCK"
+                            }
+                          },
+                          "C2-ON-ORDER" : {
+                            "minimum" : 0,
+                            "maximum" : 999,
+                            "type" : "integer",
+                            "x-ibm-zcon-metadata" : {
+                              "type" : "07 C2-ON-ORDER PIC 9(3) USAGE DISPLAY.",
+                              "name" : "C2-ON-ORDER"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "C2-INQUIRE-SINGLE" : {
+                  "type" : "object",
+                  "properties" : {
+                    "C2-ITEM-REF-REQ" : {
+                      "minimum" : 0,
+                      "maximum" : 9999,
+                      "type" : "integer",
+                      "x-ibm-zcon-metadata" : {
+                        "type" : "05 C2-ITEM-REF-REQ PIC 9(4) USAGE DISPLAY.",
+                        "name" : "C2-ITEM-REF-REQ"
+                      }
+                    },
+                    "fill_0" : {
+                      "minimum" : 0,
+                      "maximum" : 9999,
+                      "type" : "integer",
+                      "x-ibm-zcon-metadata" : {
+                        "type" : "05 FILLER PIC 9(4) USAGE DISPLAY.",
+                        "name" : "fill_0"
+                      }
+                    },
+                    "fill_1" : {
+                      "minimum" : 0,
+                      "maximum" : 999,
+                      "type" : "integer",
+                      "x-ibm-zcon-metadata" : {
+                        "type" : "05 FILLER PIC 9(3) USAGE DISPLAY.",
+                        "name" : "fill_1"
+                      }
+                    },
+                    "C2-SINGLE-ITEM" : {
+                      "type" : "object",
+                      "properties" : {
+                        "C2-SNGL-ITEM-REF" : {
+                          "minimum" : 0,
+                          "maximum" : 9999,
+                          "type" : "integer",
+                          "x-ibm-zcon-metadata" : {
+                            "type" : "07 C2-SNGL-ITEM-REF PIC 9(4) USAGE DISPLAY.",
+                            "name" : "C2-SNGL-ITEM-REF"
+                          }
+                        },
+                        "C2-SNGL-DESCRIPTION" : {
+                          "maxLength" : 40,
+                          "type" : "string",
+                          "x-ibm-zcon-metadata" : {
+                            "type" : "07 C2-SNGL-DESCRIPTION PIC X(40) USAGE DISPLAY.",
+                            "name" : "C2-SNGL-DESCRIPTION"
+                          }
+                        },
+                        "C2-SNGL-DEPARTMENT" : {
+                          "minimum" : 0,
+                          "maximum" : 999,
+                          "type" : "integer",
+                          "x-ibm-zcon-metadata" : {
+                            "type" : "07 C2-SNGL-DEPARTMENT PIC 9(3) USAGE DISPLAY.",
+                            "name" : "C2-SNGL-DEPARTMENT"
+                          }
+                        },
+                        "C2-SNGL-COST" : {
+                          "maxLength" : 6,
+                          "type" : "string",
+                          "x-ibm-zcon-metadata" : {
+                            "type" : "07 C2-SNGL-COST PIC X(6) USAGE DISPLAY.",
+                            "name" : "C2-SNGL-COST"
+                          }
+                        },
+                        "IN-SNGL-STOCK" : {
+                          "minimum" : 0,
+                          "maximum" : 9999,
+                          "type" : "integer",
+                          "x-ibm-zcon-metadata" : {
+                            "type" : "07 IN-SNGL-STOCK PIC 9(4) USAGE DISPLAY.",
+                            "name" : "IN-SNGL-STOCK"
+                          }
+                        },
+                        "ON-SNGL-ORDER" : {
+                          "minimum" : 0,
+                          "maximum" : 999,
+                          "type" : "integer",
+                          "x-ibm-zcon-metadata" : {
+                            "type" : "07 ON-SNGL-ORDER PIC 9(3) USAGE DISPLAY.",
+                            "name" : "ON-SNGL-ORDER"
+                          }
+                        }
+                      }
+                    },
+                    "fill_2" : {
+                      "maxLength" : 840,
+                      "type" : "string",
+                      "x-ibm-zcon-metadata" : {
+                        "type" : "05 FILLER PIC X(840) USAGE DISPLAY.",
+                        "name" : "fill_2"
+                      }
+                    }
+                  }
+                },
+                "C2-ORDER-REQUEST" : {
+                  "type" : "object",
+                  "properties" : {
+                    "C2-USERID" : {
+                      "maxLength" : 8,
+                      "type" : "string",
+                      "x-ibm-zcon-metadata" : {
+                        "type" : "05 C2-USERID PIC X(8) USAGE DISPLAY.",
+                        "name" : "C2-USERID"
+                      }
+                    },
+                    "C2-CHARGE-DEPT" : {
+                      "maxLength" : 8,
+                      "type" : "string",
+                      "x-ibm-zcon-metadata" : {
+                        "type" : "05 C2-CHARGE-DEPT PIC X(8) USAGE DISPLAY.",
+                        "name" : "C2-CHARGE-DEPT"
+                      }
+                    },
+                    "C2-ITEM-REF-NUMBER" : {
+                      "minimum" : 0,
+                      "maximum" : 9999,
+                      "type" : "integer",
+                      "x-ibm-zcon-metadata" : {
+                        "type" : "05 C2-ITEM-REF-NUMBER PIC 9(4) USAGE DISPLAY.",
+                        "name" : "C2-ITEM-REF-NUMBER"
+                      }
+                    },
+                    "C2-QUANTITY-REQ" : {
+                      "minimum" : 0,
+                      "maximum" : 999,
+                      "type" : "integer",
+                      "x-ibm-zcon-metadata" : {
+                        "type" : "05 C2-QUANTITY-REQ PIC 9(3) USAGE DISPLAY.",
+                        "name" : "C2-QUANTITY-REQ"
+                      }
+                    },
+                    "fill_3" : {
+                      "maxLength" : 888,
+                      "type" : "string",
+                      "x-ibm-zcon-metadata" : {
+                        "type" : "05 FILLER PIC X(888) USAGE DISPLAY.",
+                        "name" : "fill_3"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "STATUS" : {
+          "type" : "object",
+          "properties" : {
+            "CPYCON03" : {
+              "type" : "object",
+              "properties" : {
+                "C3-RETURN-CODE" : {
+                  "minimum" : 0,
+                  "maximum" : 99,
+                  "type" : "integer",
+                  "x-ibm-zcon-metadata" : {
+                    "type" : "03 C3-RETURN-CODE PIC 9(2) USAGE DISPLAY.",
+                    "name" : "C3-RETURN-CODE"
+                  }
+                },
+                "C3-RESPONSE-MESSAGE" : {
+                  "maxLength" : 79,
+                  "type" : "string",
+                  "x-ibm-zcon-metadata" : {
+                    "type" : "03 C3-RESPONSE-MESSAGE PIC X(79) USAGE DISPLAY.",
+                    "name" : "C3-RESPONSE-MESSAGE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "description" : "Response channel"
+    },
+    "abendCode" : {
+      "type" : "string"
+    }
+  },
+  "description" : "General wrapper for CICS channel z/OS Asset responses"
+}

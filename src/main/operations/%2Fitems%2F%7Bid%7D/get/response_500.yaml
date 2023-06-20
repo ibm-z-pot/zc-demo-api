@@ -1,0 +1,8 @@
+---
+mappings:
+- body:
+    mappings:
+    - message:
+        template: "{{$error.message}}{{$zosAssetResponse.channel.STATUS.CPYCON03.\"\
+          C3-RESPONSE-MESSAGE\"}}"
+version: 1
