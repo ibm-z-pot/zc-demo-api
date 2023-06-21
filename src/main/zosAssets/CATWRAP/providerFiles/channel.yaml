@@ -1,0 +1,13 @@
+---
+version: 1.0
+request:
+- name: "REQUEST"
+  type: "BIT"
+  transform: "REQUESTReq.dai"
+response:
+- name: "RESPONSE"
+  type: "BIT"
+  transform: "RESPONSEResp.dai"
+- name: "STATUS"
+  type: "BIT"
+  transform: "STATUSResp.dai"

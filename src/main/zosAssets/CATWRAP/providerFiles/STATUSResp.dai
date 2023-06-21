@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" direction="0">
+    <message id="1">
+        <segment id="1">
+            <field name="CPYCON03" originalName="CPYCON03" included="Y" path="CPYCON03" fileName="CPYCON03.cpy" structureIndex="0" structSrcFileName="CPYCON03.cpy" srcLine="01 CPYCON03.">
+                <startPos>1</startPos>
+                <bytes>81</bytes>
+                <maxBytes>81</maxBytes>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="C3-RETURN-CODE" originalName="C3-RETURN-CODE" included="Y" path="CPYCON03.C3-RETURN-CODE" srcLine="03 C3-RETURN-CODE PIC 9(2) USAGE DISPLAY.">
+                    <startPos>1</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                        <typeConverter>ZONEDDECIMAL</typeConverter>
+                    </marshaller>
+                    <applicationDatatype datatype="DECIMAL" precision="2" scale="0"/>
+                </field>
+                <field name="C3-RESPONSE-MESSAGE" originalName="C3-RESPONSE-MESSAGE" included="Y" path="CPYCON03.C3-RESPONSE-MESSAGE" srcLine="03 C3-RESPONSE-MESSAGE PIC X(79) USAGE DISPLAY.">
+                    <startPos>3</startPos>
+                    <bytes>79</bytes>
+                    <maxBytes>79</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>

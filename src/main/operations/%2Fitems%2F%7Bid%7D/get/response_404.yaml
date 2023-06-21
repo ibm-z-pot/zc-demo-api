@@ -1,0 +1,7 @@
+---
+mappings:
+- body:
+    mappings:
+    - message:
+        template: "Item {{$apiRequest.pathParameters.id}} not found in the catalog"
+version: 1

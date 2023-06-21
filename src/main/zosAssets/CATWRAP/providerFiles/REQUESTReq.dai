@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" direction="0">
+    <message id="1">
+        <segment id="1">
+            <field name="CPYCON01" originalName="CPYCON01" included="Y" path="CPYCON01" fileName="CPYCON01.cpy" structureIndex="0" structSrcFileName="CPYCON01.cpy" srcLine="01 CPYCON01.">
+                <startPos>1</startPos>
+                <bytes>32</bytes>
+                <maxBytes>32</maxBytes>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="C1-REQUEST-ID" originalName="C1-REQUEST-ID" included="Y" path="CPYCON01.C1-REQUEST-ID" srcLine="03 C1-REQUEST-ID PIC X(6) USAGE DISPLAY.">
+                    <startPos>1</startPos>
+                    <bytes>6</bytes>
+                    <maxBytes>6</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="C1-REQUEST-SPECIFIC" originalName="C1-REQUEST-SPECIFIC" included="Y" path="CPYCON01.C1-REQUEST-SPECIFIC" srcLine="03 C1-REQUEST-SPECIFIC PIC X(26) USAGE DISPLAY.">
+                    <startPos>7</startPos>
+                    <bytes>26</bytes>
+                    <maxBytes>26</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="C1-INQUIRE-REQUEST" originalName="C1-INQUIRE-REQUEST" included="Y" path="CPYCON01.C1-INQUIRE-REQUEST" redefines="C1-REQUEST-SPECIFIC" srcLine="03 C1-INQUIRE-REQUEST REDEFINES C1-REQUEST-SPECIFIC.">
+                    <startPos>7</startPos>
+                    <bytes>26</bytes>
+                    <maxBytes>26</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="C1-LIST-START-REF" originalName="C1-LIST-START-REF" included="Y" path="CPYCON01.C1-INQUIRE-REQUEST.C1-LIST-START-REF" srcLine="05 C1-LIST-START-REF PIC 9(4) USAGE DISPLAY.">
+                        <startPos>7</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
+                    </field>
+                    <field name="fill_0" originalName="fill_0" included="Y" path="CPYCON01.C1-INQUIRE-REQUEST.fill_0" srcLine="05 FILLER PIC X(22) USAGE DISPLAY.">
+                        <startPos>11</startPos>
+                        <bytes>22</bytes>
+                        <maxBytes>22</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+                <field name="C1-INQUIRE-SINGLE" originalName="C1-INQUIRE-SINGLE" included="Y" path="CPYCON01.C1-INQUIRE-SINGLE" redefines="C1-REQUEST-SPECIFIC" srcLine="03 C1-INQUIRE-SINGLE REDEFINES C1-REQUEST-SPECIFIC.">
+                    <startPos>7</startPos>
+                    <bytes>26</bytes>
+                    <maxBytes>26</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="C1-ITEM-REF-REQ" originalName="C1-ITEM-REF-REQ" included="Y" path="CPYCON01.C1-INQUIRE-SINGLE.C1-ITEM-REF-REQ" srcLine="05 C1-ITEM-REF-REQ PIC 9(4) USAGE DISPLAY.">
+                        <startPos>7</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
+                    </field>
+                    <field name="fill_1" originalName="fill_1" included="Y" path="CPYCON01.C1-INQUIRE-SINGLE.fill_1" srcLine="05 FILLER PIC X(22) USAGE DISPLAY.">
+                        <startPos>11</startPos>
+                        <bytes>22</bytes>
+                        <maxBytes>22</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+                <field name="C1-ORDER-REQUEST" originalName="C1-ORDER-REQUEST" included="Y" path="CPYCON01.C1-ORDER-REQUEST" redefines="C1-REQUEST-SPECIFIC" srcLine="03 C1-ORDER-REQUEST REDEFINES C1-REQUEST-SPECIFIC.">
+                    <startPos>7</startPos>
+                    <bytes>26</bytes>
+                    <maxBytes>26</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="C1-USERID" originalName="C1-USERID" included="Y" path="CPYCON01.C1-ORDER-REQUEST.C1-USERID" srcLine="05 C1-USERID PIC X(8) USAGE DISPLAY.">
+                        <startPos>7</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="C1-CHARGE-DEPT" originalName="C1-CHARGE-DEPT" included="Y" path="CPYCON01.C1-ORDER-REQUEST.C1-CHARGE-DEPT" srcLine="05 C1-CHARGE-DEPT PIC X(8) USAGE DISPLAY.">
+                        <startPos>15</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="C1-ITEM-REF-NUMBER" originalName="C1-ITEM-REF-NUMBER" included="Y" path="CPYCON01.C1-ORDER-REQUEST.C1-ITEM-REF-NUMBER" srcLine="05 C1-ITEM-REF-NUMBER PIC 9(4) USAGE DISPLAY.">
+                        <startPos>23</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
+                    </field>
+                    <field name="C1-QUANTITY-REQ" originalName="C1-QUANTITY-REQ" included="Y" path="CPYCON01.C1-ORDER-REQUEST.C1-QUANTITY-REQ" srcLine="05 C1-QUANTITY-REQ PIC 9(3) USAGE DISPLAY.">
+                        <startPos>27</startPos>
+                        <bytes>3</bytes>
+                        <maxBytes>3</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="3" scale="0"/>
+                    </field>
+                    <field name="fill_2" originalName="fill_2" included="Y" path="CPYCON01.C1-ORDER-REQUEST.fill_2" srcLine="05 FILLER PIC X(3) USAGE DISPLAY.">
+                        <startPos>30</startPos>
+                        <bytes>3</bytes>
+                        <maxBytes>3</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>
